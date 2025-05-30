@@ -10,7 +10,7 @@ class Category(models.Model):
 
 class Omonim(models.Model):
     word = models.CharField(max_length=100)
-    meanings = models.TextField()  # JSON yoki \n bilan ajratilgan matnlar
+    meanings = models.TextField()  
     example = models.TextField(blank=True, null=True)
     audio = models.FileField(upload_to='audio/', blank=True, null=True)
     categories = models.ManyToManyField(Category, related_name='omonims')
